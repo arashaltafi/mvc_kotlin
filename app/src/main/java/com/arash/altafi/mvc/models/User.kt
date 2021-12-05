@@ -11,14 +11,14 @@ data class User(var email: String, var password: String) : IUser {
         // 2. Check for Password < 6
 
         return if (TextUtils.isEmpty(email))
-            0;
+            0
         else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches())
-            1;
+            1
         else if (TextUtils.isEmpty(password))
-            2;
+            2
         else if (password.length <= 6)
-            3;
+            3
         else
-            -1;
+            -1
     }
 }
